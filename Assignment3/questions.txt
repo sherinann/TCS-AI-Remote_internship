@@ -1,0 +1,8 @@
+Assignment 3:
+Numpy
+1. Create a function which creates an n×n array with (i,j)-entry equal to i+j.
+2. Create a numpy array which contains odd numbers below 20. Arrange it to a 2x5 matrix. Compute the log of each element.
+3. Create a function which creates an n×n random array. Subtract the average of each row of the matrix
+4. Create a function which creates an n×n random array. Write a program to find the nearest value from a given value in the array.
+5. Write a function to check if two random arrays are equal or not.
+6. Create a function to get the n largest values of an array.
