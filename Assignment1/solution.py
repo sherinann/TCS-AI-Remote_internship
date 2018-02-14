@@ -44,3 +44,13 @@ print(iris)
 plt.hist(iris['Species'])
 plt.show()
 
+#10 .Find the deviation of length for ‘SepalLengthCm’ from the average
+print('standard deviation:',iris['SepalLengthCm'].std())
+
+#11 . Find correlation between columns and display columns with more than 70% percent correlation (either positive or negative).
+for i in range(iris.shape[1]):
+    for j in range(1,iris.shape[1]):
+        print(iris.loc[i].corr(iris.loc[j]))
+print(iris.shape[0], iris.shape[1])
+
+print('correlation:')
