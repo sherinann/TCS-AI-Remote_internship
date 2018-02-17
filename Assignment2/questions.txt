@@ -9,4 +9,3 @@ User movie ratings dataset
 6. Provide a table with the average rating of a movie by each genre group along with the movie title.
 
 
-3. wrong
