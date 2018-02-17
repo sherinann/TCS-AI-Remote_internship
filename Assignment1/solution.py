@@ -48,9 +48,15 @@ plt.show()
 print('standard deviation:',iris['SepalLengthCm'].std())
 
 #11 . Find correlation between columns and display columns with more than 70% percent correlation (either positive or negative).
-for i in range(iris.shape[1]):
-    for j in range(1,iris.shape[1]):
-        print(iris.loc[i].corr(iris.loc[j]))
-print(iris.shape[0], iris.shape[1])
+for i in range(len(features)):
+    for j in range(i+1,len(features)):
+        val=iris[features[i]].corr(iris[features[j]])
+        if abs(val)>0.7:
+            print( 'correlation of ', features[i], features[j],':', val)
 
-print('correlation:')
+#12. Impute missing values if present using mean of the dataset.
+for i in range(len(features)):
+    iris[features[i]].fillna((iris[features[i]].mean()), inplace=True)
+
+#13. Save the current dataFrame out to a new csv file.
+iris.to_csv('new_iris.csv', index=False, header=None)
