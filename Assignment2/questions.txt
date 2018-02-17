@@ -8,3 +8,5 @@ User movie ratings dataset
 5. Find the group that provides the highest average movie ratings when split into genre groups.
 6. Provide a table with the average rating of a movie by each genre group along with the movie title.
 
+
+3. wrong
