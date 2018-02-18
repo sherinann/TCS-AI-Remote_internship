@@ -3,9 +3,11 @@ import matplotlib.pyplot as plt
 
 #1. Read and merge the dataset into single dataframe
 game=pd.read_csv('ign/ign.csv', index_col=0,usecols=range(7))
+game=game.drop(game.index[18365])
 game=game.dropna(axis=0)
 scores=pd.read_csv('ign/ign_score.csv',index_col=0,usecols=range(5))
-scores=scores.dropna(how='any', axis=0)
+scores=scores.drop(scores.index[18365])
+scores=scores.dropna( axis=0)
 game_new=pd.merge(game,scores,left_index=True, right_index=True)
 header=list(game_new)
 print('merged dataframe','\n')
@@ -27,7 +29,7 @@ plt.show()
 #5. Find the group that provides the highest average movie ratings when split into genre groups.
 movie_info['genre_mean_score']=movie_info.groupby('genre')['score'].transform('mean')
 movie_info=movie_info.sort_values(['genre_mean_score'],ascending=False)
-print(movie_info['genre'][0])
+print('genre with highest average ratings:',movie_info['genre'][0])
 
 #6. Provide a table with the average rating of a movie by each genre group along with the movie title.
 table=pd.pivot_table(movie_info, values='score',index=['genre','title'])
