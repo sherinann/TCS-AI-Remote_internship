@@ -8,8 +8,3 @@ Numpy
 6. Create a function to get the n largest values of an array.
 
 
-doubts:
-1) numpy or not ?
-3) subract average from each element? random element limit?
-4) nearest value and given value both in array ?
-5)

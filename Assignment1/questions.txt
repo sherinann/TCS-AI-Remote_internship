@@ -14,4 +14,4 @@ Assignment 1:
 13. Save the current dataFrame out to a new csv file.
 
 
-5) scatter plot separate ?
+

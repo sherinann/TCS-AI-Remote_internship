@@ -16,9 +16,16 @@ print('features:',features)
 print(iris.head(n=5))
 
 #5. Make a scatterplot of the Iris features.
-ax1 = iris.plot(kind='scatter', x=features[0], y=features[1], color='r')
-ax2 = iris.plot(kind='scatter', x=features[0], y=features[2], color='g')
-ax3 = iris.plot(kind='scatter', x=features[0], y=features[3], color='g')
+colors = np.where(iris['Species']=='Iris-setosa','r','-')
+colors[iris['Species']=='Iris-virginica'] = 'y'
+colors[iris['Species']=='Iris-versicolor'] = 'b'
+print(colors)
+for i in range(len(features)):
+    for j in range(i+1,len(features)):
+        iris.plot.scatter(x=features[i],y=features[j],c=colors)
+#ax1 = iris.plot(kind='scatter', x=features[0], y=features[1],  color='r')
+#ax2 = iris.plot(kind='scatter', x=features[0], y=features[2], color='g')
+#ax3 = iris.plot(kind='scatter', x=features[0], y=features[3], color='g')
 plt.show()
 
 #6. What is the range of ‘SepalLengthCm’ in the dataset?
