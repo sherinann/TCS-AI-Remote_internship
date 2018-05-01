@@ -26,7 +26,6 @@ project flow:
 9. Unimportant columns are deleted.
 10. Training data is divided into train and test in 70:30 ratio.
 11. Training data is again divided into train and validate in 80:20 ratio.
-12. Dataset is trained using 'Naive Bayes', 'svm' and 'Decision Tree' models. The data imbalance is handled by
-    applying weight='balanced' for svm and using tree based models(Decision tree).
+12. Dataset is trained using 'Naive Bayes', 'svm' and 'Decision Tree' models. The data imbalance is handled by applying weight='balanced' for svm and using tree based models(Decision tree).
 13. Performance measures are calculated with validation data.
 14. Accuracy of test set is found.
